@@ -73,28 +73,23 @@ export const CarouselP = styled.p`
 `;
 
 export const FactCardContent = styled.div`   
-    width: 30rem;
+    width: 40%;
+    height: 40%;
     margin: 3rem;
     display: flex;
+    flex: wrap;
     flex-direction: column;
     background-color: #d3d3d3;
     padding: 2rem;
     position: relative;
     border-radius: 0.5rem;
-    box-shadow: 2rem 3rem 5rem #aaa;
 `;
 
-export const FactCardH2 = styled.h2`   
+export const FactCardH2 = styled.h2`  
     border-radius: 0.5rem;
-    padding: 0.3rem 0.5rem;
-    position: absolute;
-    top: 2.5rem;
-    left: 2.5rem;
-    right: 2.5rem;
-    font-size: 2rem;
-    font-weight: 400;
-    text-shadow: 0 0.5rem 0.5rem #555;
-    color: #fff;
+    font-size: 2.5rem;
+    font-weight: #bold;
+    color: #000;
 `;
 
 export const FactCardImg = styled.img`   

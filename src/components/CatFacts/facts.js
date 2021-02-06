@@ -5,8 +5,8 @@ const CatFacts = ({ cat, fact }) => {
   const { url } = cat;
   return (
     <FactCardContent>
-      <FactCardH2>{fact ? fact.fact : ''}</FactCardH2>
       <FactCardImg src={url} alt='' />
+      <FactCardH2>{fact ? fact.fact : ''}</FactCardH2>
     </FactCardContent>
   );
 };
