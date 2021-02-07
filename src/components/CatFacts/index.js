@@ -19,7 +19,7 @@ const Carousel = () => {
   console.log(facts, cats)
 
   const getFacts = async () => {
-    const response = await Axios.get('/random')
+    const response = await Axios.get('https://hidden-dawn-56454.herokuapp.com/random')
       setCats(response.data.image);
       setfacts(response.data.fact);
   };
