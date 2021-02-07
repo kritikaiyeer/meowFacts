@@ -27,7 +27,9 @@ const Hero = () => {
         </HeroContainer>
       )}
       {state === "fact" && (
+        <HeroContainer>
           <CatFacts />
+          </HeroContainer>
       )}
     </>
   );
