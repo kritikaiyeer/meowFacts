@@ -5,7 +5,7 @@ const Navbar = ({ toggle }) => {
   return (
     <>
       <Nav>
-        <NavLink to='/'>RANDOM CAT FACTS</NavLink>
+        <NavLink>RANDOM CAT FACTS</NavLink>
       </Nav>
     </>
   );

@@ -67,7 +67,6 @@ const Carousel = () => {
             <ArrowBackIosIcon style={{ fontSize: 30 }} />
           </CarouselLeft>
           <CarouselItem>
-            <CarouselH1>{`Top Fact #${currImg + 1}`}</CarouselH1>
             <CarouselP>{images[currImg].subtitle}</CarouselP>
           </CarouselItem>
           <CarouselRight
