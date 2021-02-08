@@ -7,49 +7,61 @@ import {
   CarouselItem,
   CarouselRight,
   CarouselP,
+  FactCardImg,
 } from "./CatFactsElements";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 
-
 const Carousel = () => {
-
   const [facts, setfacts] = useState([]);
   const [cats, setCats] = useState([]);
-  console.log(facts, cats)
+  const [load, setLoad] = useState(false);
 
   const getFacts = async () => {
-    const response = await Axios.get('https://hidden-dawn-56454.herokuapp.com/random')
-      setCats(response.data.image);
-      setfacts(response.data.fact);
+    const response = await Axios.get(
+      "https://hidden-dawn-56454.herokuapp.com/random"
+    );
+    setCats(response.data.image);
+    setfacts(response.data.fact);
   };
 
   useEffect(() => {
     if (facts && facts.length === 0 && cats.length === 0) {
       getFacts();
     }
-  },[facts, cats]);
+  }, [facts, cats]);
 
   return (
-      <CarouselContainer>
-        <CarouselContent
-          style={{ backgroundImage: `url(${cats})` }}
+    <CarouselContainer>
+      <CarouselContent>
+        <CarouselLeft
+          onClick={() => {
+            getFacts();
+            setCats([]);
+            setfacts([]);
+            setLoad(false);
+          }}
         >
-          <CarouselLeft
-            onClick={() => {getFacts();}}
-          >
-            <ArrowBackIosIcon style={{ fontSize: 30 }} />
-          </CarouselLeft>
+          <ArrowBackIosIcon style={{ fontSize: 30 }} />
+        </CarouselLeft>
+        {load && (
           <CarouselItem>
             <CarouselP>{facts}</CarouselP>
           </CarouselItem>
-          <CarouselRight
-            onClick={() => {getFacts();}}
-          >
-            <ArrowForwardIosIcon style={{ fontSize: 30 }} />
-          </CarouselRight>
-        </CarouselContent>
-      </CarouselContainer>
+        )}
+        <CarouselRight
+          onClick={() => {
+            getFacts();
+            setCats([]);
+            setfacts([]);
+            setLoad(false);
+          }}
+        >
+          <ArrowForwardIosIcon style={{ fontSize: 30 }} />
+        </CarouselRight>
+      </CarouselContent>
+      <FactCardImg src={cats} alt="" onLoad={() => setLoad(true)} />
+    </CarouselContainer>
   );
 };
 

@@ -16,9 +16,10 @@ export const CarouselContainer = styled.div`
 export const CarouselContent = styled.div`
   height: 100%;
   width: 100%;
-  background-position: center;
-  background-size: cover;
+  position: absolute;
   display: flex;
+  place-items: center;
+  background-position: center;
 `;
 
 export const CarouselItem = styled.div`
@@ -29,6 +30,7 @@ export const CarouselItem = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   text-align: justify;
   text-align-last: center;
+  
 `;
 
 export const CarouselLeft = styled.div`
@@ -87,6 +89,9 @@ export const FactCardH2 = styled.h2`
 `;
 
 export const FactCardImg = styled.img`
-  border-radius: 0.5rem;
-  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
 `;
