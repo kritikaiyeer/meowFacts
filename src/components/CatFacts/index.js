@@ -37,7 +37,6 @@ const Carousel = () => {
         <CarouselLeft
           onClick={() => {
             setCats([]);
-            setfacts([]);
             setLoad(false);
             getFacts();
           }}
@@ -52,7 +51,6 @@ const Carousel = () => {
         <CarouselRight
           onClick={() => {
             setCats([]);
-            setfacts([]);
             setLoad(false);
             getFacts();
           }}
