@@ -36,10 +36,10 @@ const Carousel = () => {
       <CarouselContent>
         <CarouselLeft
           onClick={() => {
-            getFacts();
             setCats([]);
             setfacts([]);
             setLoad(false);
+            getFacts();
           }}
         >
           <ArrowBackIosIcon style={{ fontSize: 30 }} />
@@ -51,10 +51,10 @@ const Carousel = () => {
         )}
         <CarouselRight
           onClick={() => {
-            getFacts();
             setCats([]);
             setfacts([]);
             setLoad(false);
+            getFacts();
           }}
         >
           <ArrowForwardIosIcon style={{ fontSize: 30 }} />
